@@ -1,15 +1,11 @@
+# Usamos la imagen oficial de PHP con Apache
 FROM php:8.2-apache
 
-# Copiar el código al contenedor
+# Copiamos los archivos de tu proyecto al contenedor
 COPY . /var/www/html/
 
-# Permitir URL-encoded GET
-RUN a2enmod rewrite
-
-
-
-
-
+# Exponemos el puerto que Apache usa
+EXPOSE 80
 
 
 
